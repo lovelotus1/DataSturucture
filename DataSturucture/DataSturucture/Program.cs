@@ -14,9 +14,9 @@ namespace DataStructure
 
             Console.WriteLine("Search Operation !");
             LinkedList list = new LinkedList();
-            list.AddReverse(70);
-            list.AddReverse(30);
-            list.AddReverse(56);
+            list.Appending(56);
+            list.Appending(30);
+            list.Appending(70);
             Console.WriteLine("Display Nodes Are:");
 
             list.Display();
