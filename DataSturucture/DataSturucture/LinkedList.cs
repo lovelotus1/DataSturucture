@@ -9,7 +9,7 @@ namespace DataStructure
     {
         internal Node head;
         private Node temp;
-        internal void Appending(int data)
+        internal void Add(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -40,6 +40,40 @@ namespace DataStructure
                 Console.WriteLine(temp.data + " ");
                 temp = temp.next;
             }
+        }
+        internal Node InsertAtParticularPosition(int position, int data)
+        {
+                if (position < 1)
+                {
+                    Console.WriteLine("Invalid position");
+
+                    if (position == 1)
+                    {
+                        var newNode = new Node(data);
+                        newNode.next = this.head;
+                        head = newNode;
+                    }
+                    else
+                    {
+                        while (position-- != 0)
+                        {
+                            if (position == 1)
+                            {
+                                Node node = new Node(data);
+                                node.next = this.head.next;
+                                head.next = node;
+                                break;
+                            }
+                            head = head.next;
+                        }
+                        if (position != 1)
+
+                            Console.WriteLine("Position out of range");
+                    }
+
+                }
+            Console.WriteLine("Inserted value is : " + data);
+            return head;
         }
     }
 }
