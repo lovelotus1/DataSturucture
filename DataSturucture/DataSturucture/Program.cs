@@ -12,11 +12,12 @@ namespace DataStructure
             Console.WriteLine("Welcome to Data Structure Problem Program!");
             Console.WriteLine("Search Operation !");
             LinkedList list = new LinkedList();
+            list.Add(30);
             list.Add(56);
             list.Add(70);
             Console.WriteLine("Display Nodes Are:");
+            list.RemoveLastNode();
             list.Display();
-            list.InsertAtParticularPosition(2, 30);
             Console.WriteLine("============================================");
             Console.ReadLine();
         }
