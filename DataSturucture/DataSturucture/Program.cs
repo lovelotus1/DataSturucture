@@ -14,9 +14,9 @@ namespace DataStructure
             LinkedList list = new LinkedList();
             list.Add(30);
             list.Add(56);
+            list.Add(30);
             list.Add(70);
-            Console.WriteLine("Display Nodes Are:");
-            list.RemoveLastNode();
+
             list.Display();
             Console.WriteLine("============================================");
             Console.ReadLine();
