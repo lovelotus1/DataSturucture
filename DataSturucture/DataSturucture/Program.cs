@@ -12,17 +12,12 @@ namespace DataStructure
             Console.WriteLine("Welcome to Data Structure Problem Program!");
             Console.WriteLine("Search Operation !");
             LinkedList list = new LinkedList();
-            list.Add(30);
             list.Add(56);
             list.Add(30);
             list.Add(70);
-<<<<<<< HEAD
-            list.RemoveFirstNode();
-            Console.WriteLine("After Removing is : ");
-=======
-            Console.WriteLine("Display Nodes Are:");
-            list.RemoveLastNode();
->>>>>>> UC5_DeleteLastElement
+            int searchData = list.Search(30);
+            if (searchData != 0)
+                Console.WriteLine("\n{0} is present in the LinkedList ", searchData);
             list.Display();
             Console.WriteLine("============================================");
             Console.ReadLine();

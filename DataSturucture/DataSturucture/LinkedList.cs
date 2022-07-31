@@ -41,35 +41,20 @@ namespace DataStructure
                 temp = temp.next;
             }
         }
-<<<<<<< HEAD
-        internal Node RemoveFirstNode()
+        internal int Search(int value)
         {
-            if (this.head == null)
+            
+            Node temp = this.head;
+            while (temp != null)
             {
-                return null;
-
-            }
-            this.head = this.head.next;
-            return this.head;
-=======
-        internal Node RemoveLastNode()
-        {
-            if (head == null)
+                if (temp.data == value)
                 {
-                    return null;
+                    return value; //node is present
                 }
-            if (head.next == null)
-            {
-                return null;
+                temp = temp.next;
             }
-            Node NewNode = head;
-            while (NewNode.next.next != null)
-            {
-                NewNode = NewNode.next;
-            }
-            NewNode.next = null;
-            return head;
->>>>>>> UC5_DeleteLastElement
+            Console.WriteLine("\n{0} is not present ", value);
+            return 0;
         }
     }
 }
