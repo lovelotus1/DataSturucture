@@ -13,10 +13,11 @@ namespace DataStructure
             Console.WriteLine("Search Operation !");
             LinkedList list = new LinkedList();
             list.Add(56);
+            list.Add(30);
             list.Add(70);
-            Console.WriteLine("Display Nodes Are:");
+            list.RemoveFirstNode();
+            Console.WriteLine("After Removing is : ");
             list.Display();
-            list.InsertAtParticularPosition(2, 30);
             Console.WriteLine("============================================");
             Console.ReadLine();
         }
